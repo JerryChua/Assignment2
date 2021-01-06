@@ -13,3 +13,4 @@ tempreature
 psi
 
 and other stuff on the way
+s
