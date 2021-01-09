@@ -1,4 +1,4 @@
-let clock = () => {                                                             //this is the clock that counts
+let clock = () => {                                                                 //this is the clock that counts
     let date = new Date();
     let hrs = date.getHours();
     let mins = date.getMinutes();
@@ -31,7 +31,7 @@ date();
 
 
 
-$(document).ready(function () {
+$(document).ready(function () {                                                     //getting the psi
     $.ajax({
         type: "GET",
         dataType: 'json',
@@ -57,7 +57,7 @@ $(document).ready(function () {
 
 
 
-function tod() {                                                             //time of day for background change
+function tod() {                                                                    //time of day for background change
     var time = new Date().getHours();
     if (time < 6) {
         window.location.replace("night.html");
