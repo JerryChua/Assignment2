@@ -1,0 +1,25 @@
+body {
+    background-image: linear-gradient(180deg, rgba(24,0,136,1) 0%, rgba(0,100,196,1) 100%);
+}
+
+.centerimage{
+    text-align: center;
+
+}
+
+#date{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff;
+    font-size: 36px;
+    float: left;
+    padding-left: 3%;
+    text-decoration: underline;
+}
+#clock {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff;
+    font-size: 36px;
+    float: right;
+    padding-right: 3%;
+    text-decoration: underline;
+}
