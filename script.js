@@ -1,4 +1,4 @@
-let clock = () => {
+let clock = () => {                                                             //this is the clock that counts
     let date = new Date();
     let hrs = date.getHours();
     let mins = date.getMinutes();
@@ -20,3 +20,37 @@ let clock = () => {
   };
   
   clock();
+let date = () => {
+    n =  new Date();                                                                //this gets the date
+    y = n.getFullYear();
+    m = n.getMonth() + 1;
+    d = n.getDate();
+    document.getElementById("date").innerHTML = m + "/" + d + "/" + y;
+};
+date();
+
+
+
+$(document).ready(function () {
+    $.ajax({
+      type: "GET",
+      dataType: 'json',
+      contetType: "text/plain",
+      url: "https://api.data.gov.sg/v1/environment/psi",
+      headers: {},
+      data: {
+        "date": date()
+      },
+      success: function (data) {
+        console.log("API status: " + data.api_info.status)
+        var reading_twenty_four =
+          data.items[0].readings.psi_twenty_four_hourly;
+        var content = "";
+        $.each(reading_twenty_four, function (key, obj) {
+          console.log(key + ":" + obj);
+          content += key + ": " + obj + "<br/>";
+        });
+        $("#psi-twenty-four").html(content);
+        }
+    });
+});

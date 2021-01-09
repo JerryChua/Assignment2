@@ -4,14 +4,20 @@ body {
 
 .centerimage{
     text-align: center;
+
 }
 
-
+#date{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #707070;
+    font-size: 36px;
+    float: left;
+    padding-left: 3%;
+}
 #clock {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #707070;
     font-size: 36px;
-    text-align: right;
-    padding-top: 3%;
+    float: right;
     padding-right: 3%;
 }
