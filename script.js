@@ -31,9 +31,9 @@ date();
 
 let datetime = () => {
     let d = new Date();
-    time = d.toISOString().split('.')[0]+"Z"
-}
-datetime()
+    time = d.toISOString().split('.')[0]+"Z";
+};
+datetime();
 
 $(document).ready(function () {                                                     //getting the weather
     $.ajax({
@@ -47,8 +47,8 @@ $(document).ready(function () {                                                 
             "date": date()
         },
         success: function (data) {
-            console.log("Weather API status: " + data.api_info.status)
-            var reading = data.items[0].readings
+            console.log("Weather API status: " + data.api_info.status);
+            var reading = data.items[0].readings;
             var i = 0;
             var sum = 0;
             $.each(reading, function (items, reads) {
@@ -58,7 +58,7 @@ $(document).ready(function () {                                                 
             });
             avr = (sum/i).toFixed(1);
             $("#avgtemp").html(avr + " &deg;C");
-            console.log(avr)
+            console.log(avr);
         }
     });
 });
@@ -76,13 +76,13 @@ $(document).ready(function () {                                                 
             "date": date()
         },
         success: function (data) {
-            console.log("PSI API status: " + data.api_info.status)
+            console.log("PSI API status: " + data.api_info.status);
             var region = {west:data.items[0].readings.psi_twenty_four_hourly.west, 
                         north:data.items[0].readings.psi_twenty_four_hourly.north,
                         east:data.items[0].readings.psi_twenty_four_hourly.east,
                         south:data.items[0].readings.psi_twenty_four_hourly.south,
                         national:data.items[0].readings.psi_twenty_four_hourly.national,
-                        central:data.items[0].readings.psi_twenty_four_hourly.central}
+                        central:data.items[0].readings.psi_twenty_four_hourly.central};
             
             $("#west").html(region.west);
             $("#south").html(region.south);
@@ -91,11 +91,11 @@ $(document).ready(function () {                                                 
             $("#central").html(region.central);
             $("#national").html(region.national);
 
-            north = region.north
-            south = region.south
-            east = region.east
-            west = region.west
-            central = region.central
+            north = region.north;
+            south = region.south;
+            east = region.east;
+            west = region.west;
+            central = region.central;
 
         }
     });
