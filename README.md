@@ -19,3 +19,5 @@ psi
 
 the background will be responsive according to the time of the day, changing its colour and gradient to show a different portion of the day.
 you will be able to select the region of which you would like to see the psi in and it will display the current psi of the region that is stated on the button clicked.
+
+to run the code in github:https://jerrychua.github.io/Assignment2/
