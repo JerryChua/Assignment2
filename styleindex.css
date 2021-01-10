@@ -9,7 +9,7 @@ body {
 
 #date{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #707070;
+    color: #666666;
     font-size: 36px;
     float: left;
     padding-left: 3%;
@@ -17,7 +17,7 @@ body {
 }
 #clock {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #707070;
+    color: #666666;
     font-size: 36px;
     float: right;
     padding-right: 3%;
