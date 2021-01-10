@@ -43,18 +43,25 @@ $(document).ready(function () {                                                 
         },
         success: function (data) {
             console.log("API status: " + data.api_info.status)
-            var reading_twenty_four =
-            data.items[0].readings.psi_twenty_four_hourly;
-            var content = "";
-            $.each(reading_twenty_four, function (key, obj) {
-                console.log(key + ":" + obj);
-                content += key + ": " + obj + "<br/>";
-            });
-            $("#psi-twenty-four").html(content);
+            var region = {west:data.items[0].readings.psi_twenty_four_hourly.west, 
+                        north:data.items[0].readings.psi_twenty_four_hourly.north,
+                        east:data.items[0].readings.psi_twenty_four_hourly.east,
+                        south:data.items[0].readings.psi_twenty_four_hourly.south,
+                        central:data.items[0].readings.psi_twenty_four_hourly.central}
+            
+            $("#west").html(region.west);
+            $("#south").html(region.south);
+            $("#east").html(region.east);
+            $("#north").html(region.north);
+            $("#central").html(region.central);             
         }
     });
 });
 
+
+function clicknorth() {
+    document.getElementById("gonorth").innerHTML.id="north";
+  }
 
 
 function tod() {                                                                    //time of day for background change
