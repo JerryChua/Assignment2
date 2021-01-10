@@ -135,7 +135,7 @@ function tod() {                                                                
     else if (time < 22) {
         window.location.replace("dusk.html");
     }
-    else if (time > 22) {
+    else {
         window.location.replace("night.html");
     }
   }

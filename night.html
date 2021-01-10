@@ -7,20 +7,46 @@
     </head>
     
     <body>
-        <p id="clock"></p>                                                  <!--activating the clock-->
-        <p id="date"></p>                                                   <!--activating the date-->
-        <div class="centerimage">
-            <img alt="moon" src="moon.png" width="250" >
+        <div class = "top">
+
+            <div class = "toprow">
+                <div class = "topleft">
+                    <div class = "stackdown">
+                        <p id="date"></p>                                                  <!--activating the clock-->
+                        <p id="avgtemp"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class = "toprow">
+                <div class="topcenter">
+                    <div class = "stackdown">
+                        <p>National PSI</p>
+                        <p id="national"></p>                                               <!--This is the default showing the national psi-->
+                    </div>
+                </div>
+            </div>
+
+            <div class = "toprow">
+                <div class = "topright">
+                    <p id="clock"></p>                                                   <!--activating the date-->
+                </div>
+            </div>
+
         </div>
-        <button onclick="clicknorth()">north</button>
-        <button onclick="clicksouth()">south</button>
-        <button onclick="clickeast()">east</button>
-        <button onclick="clickwest()">west</button>
-        <button onclick="clickcentral()">central</button>
+            <div class="centerimage">
+                <img alt="moon" src="moon.png" width="250">
+            </div>
+            <div class="buttons">
+                <button onclick="clicknorth()">north</button>
+                <button onclick="clicksouth()">south</button>
+                <button onclick="clickeast()">east</button>
+                <button onclick="clickwest()">west</button>
+                <button onclick="clickcentral()">central</button>            
+            </div>
+        </div>
+        
         <p id="gowhere"></p>                                                <!--selection of the area to display the psi-->
-        <p id="national"></p>                                               <!--This is the default showing the national psi-->
-        <p>national</p>
-        <p id="avgtemp"></p>
         <script src="script.js"></script>                                   <!--activating the javascript stuff-->
     </body>
     

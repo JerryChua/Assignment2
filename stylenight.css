@@ -4,23 +4,73 @@ body {
 
 .centerimage{
     text-align: center;
-    padding-top: 190px;
+    padding-top: 50px;
 }
 
-#date{
+.top {
+    display: flex;
+    flex-direction: row;
+}
+
+.toprow{
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+}
+
+.topleft{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #ffffff;
     font-size: 36px;
-    float: left;
     padding-left: 3%;
     text-decoration: underline;
+    text-align: left;
 }
-#clock {
+
+.topright {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #ffffff;
     font-size: 36px;
-    float: right;
     padding-right: 3%;
     text-decoration: underline;
+    text-align: right;
 }
 
+.topcenter{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff;
+    font-size: 36px;
+    text-align: center;
+}
+
+.stackdown{
+    flex-direction: column;
+}
+
+
+button {
+    background-color: #b8b8b881;
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 15px 28px;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+    width: 7%;
+    float:right;
+}
+
+#gowhere{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff;
+    font-size: 26px;
+    padding-left: 3%;
+    text-decoration: underline;
+    padding-top: 3%;
+}
