@@ -47,22 +47,45 @@ $(document).ready(function () {                                                 
                         north:data.items[0].readings.psi_twenty_four_hourly.north,
                         east:data.items[0].readings.psi_twenty_four_hourly.east,
                         south:data.items[0].readings.psi_twenty_four_hourly.south,
+                        national:data.items[0].readings.psi_twenty_four_hourly.national,
                         central:data.items[0].readings.psi_twenty_four_hourly.central}
             
             $("#west").html(region.west);
             $("#south").html(region.south);
             $("#east").html(region.east);
             $("#north").html(region.north);
-            $("#central").html(region.central);             
+            $("#central").html(region.central);
+            $("#national").html(region.national);
+
+            north = region.north
+            south = region.south
+            east = region.east
+            west = region.west
+            central = region.central
+
         }
     });
 });
 
 
 function clicknorth() {
-    document.getElementById("gonorth").innerHTML.id="north";
-  }
+    document.getElementById("gowhere").innerHTML = "PSI in the north: " + north;
+}
 
+function clicksouth() {
+    document.getElementById("gowhere").innerHTML = "PSI in the south: " + south;
+}
+
+function clickeast() {
+    document.getElementById("gowhere").innerHTML = "PSI in the east: " + east;
+}
+
+function clickwest() {
+    document.getElementById("gowhere").innerHTML = "PSI in the west: " + west;
+}
+function clickcentral() {
+    document.getElementById("gowhere").innerHTML = "PSI in central Singapore: " + central;
+}
 
 function tod() {                                                                    //time of day for background change
     var time = new Date().getHours();
